@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import Header from './Header'
 import Container from './Container'
+import Footer from './Footer'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <div>
-<Header /> 
+    <Header /> 
     <Container />
+    <Footer />
+    <App />
     </div>,
     document.getElementById('root'));
 
