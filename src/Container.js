@@ -1,13 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { style } from './style.js';
-import App from './App.css'
+
 
 class Container extends React.Component {
+    state= {
+        searchText:''
+    }
+    onSearchChange= e => {
+        this.setState ({
+            searchText: e.target.value
+        })
+    }
+    handleSubmit= e => {
+        e.preventDefault();
+        this.props.onSearch(this.query.value);
+        e.currentTarget.reset();
+    } 
     render() {
         return (
-        <main style={headerStyle} className="flexContainer">
-        <input type="text" placeholder="Search Recipes" style={inputStyle} id="searchField"/>
-        </main>
+        <form onSubmit={this.handleSubmit} style={headerStyle} className="flexContainer">
+        <input 
+        type="search" 
+        onChange= {this.onSearchChange}
+        name="search"
+        ref= {(input) => this.query= input}
+        placeholder="Search Recipes" 
+        style={inputStyle} />
+        <button type="submit" style={buttonStyle} >Search</button>
+        <div id="results"></div>
+        </form>
         )
     }
 }
@@ -27,6 +48,12 @@ const inputStyle= {
     height: 40,
     display: "block"
 }
-
+const buttonStyle= {
+    padding: 10,
+    borderRadius: 15,
+    margin: 15,
+    marginLeft: 0,
+    fontSize: 16
+}
 
 export default Container
