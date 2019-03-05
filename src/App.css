@@ -63,9 +63,15 @@ a {
 display: flex;
 justify-content: space-between;
 }
-.flexContainer {
+.flexContainer{
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;	
 }
-
+img {
+	width: 250px;
+	display: inline-block;
+}
+.recipeList {
+	height: 100vh;
+}

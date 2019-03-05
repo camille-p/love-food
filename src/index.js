@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Header from './Header'
-import Container from './Container'
 import Footer from './Footer'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <div>
     <Header /> 
-    <Container />
-    <Footer />
     <App />
+    <Footer />
     </div>,
     document.getElementById('root'));
 

@@ -1,13 +1,17 @@
 import React from 'react'
+import RecipeItems from './RecipeItems.js'
 
-const RecipeList = props =>
-
-    <ul>
-        {props.results.map((result, index) =>
-            <li key={index}>
-                <img src={result.urls.small} key={result.id} alt="food"/>
-            </li>
-        )}
-    </ul>;
+class RecipeList extends React.Component {
+    render() {        
+        return(
+            <div>
+                {this.props.results.map((recipe, index) => (<RecipeItems key={index} recipe={recipe.recipe} />))}
+            </div>
+        )
+    }
+}
+RecipeList.defaultProps= {
+    results: []
+}
 
 export default RecipeList;
