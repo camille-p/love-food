@@ -1,11 +1,11 @@
 import React from "react";
 
 const RecipeItems = ({ recipe }) => (
-    <div className="recipeList">
-    <div>
+    <div className="recipeItems">
+    <div className="recipeItemsFlex">
       <h2>{recipe.label}</h2>
       <img src={recipe.image} alt="food" />
-      <a href={recipe.url}>Website where recipe is</a>
+      <p>Click <a href={recipe.url}>here</a> for the full recipe</p>
     </div>
     </div>
   );

@@ -38,6 +38,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: Palatino;
 }
 ol, ul {
 	list-style: none;
@@ -55,23 +56,76 @@ table {
 	border-spacing: 0;
 }
 
+h1 {
+    font-size: 32px;
+    padding: 35px; 
+}
 a {
 	color:rgb(233,220,205);
 }
 
-.flexFooter {
-display: flex;
-justify-content: space-between;
-}
-.flexContainer{
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;	
-}
 img {
 	width: 250px;
 	display: inline-block;
 }
-.recipeList {
-	height: 100vh;
+
+h2 {
+	color: black;
+	font-size: 22px;
+	padding: 5px;
 }
+p {
+	font-size: 18px;
+	color: rgb(67,87,94);
+}
+
+input {
+	width: 300px;
+	padding: 10px;
+	font-size: 16px;
+	margin: 20px;
+	height: 40px;
+	display: block;
+}
+
+footer, header {
+	height: 100px;
+	margin: 0;
+	color: rgb(233,220,205);
+	background-color: rgb(156, 13, 56);
+}
+footer p {
+	color: rgb(233,220,205);
+}
+.flexFooter, .flexContainer, .recipeItems {
+	display: flex;
+}
+.flexFooter {
+justify-content: space-between;
+}
+.flexFooter img {
+	width: 150px;
+	padding: 0;
+}
+.flexFooter p:last-child {
+	padding: 15px;
+}
+.flexContainer{
+	justify-content: center;
+	height: 150px;
+}
+.containerStyle {
+	text-align: center;
+	background-color: rgb(233,220,205);
+}
+.recipeItems {
+	justify-content: space-around;	
+	background-color: rgb(233,220,205);
+}
+.recipeItems a{
+	color: rgb(67,87,94);
+}
+.recipeItemsFlex {
+display: block;
+}
+

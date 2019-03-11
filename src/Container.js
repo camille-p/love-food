@@ -1,5 +1,4 @@
 import React from "react";
-import { style } from "./style.js";
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -13,36 +12,21 @@ class SearchBar extends React.Component {
 };
   render() {
     return (
+      <div>
+    <h2 className="containerStyle">Search for recipes by typing the name of an ingredient</h2>
       <form
         onSubmit={this.handleSubmit}
-        style={headerStyle}
-        className="flexContainer"
+        className="flexContainer containerStyle"
       >
         <input
           type="text"
           name="text"
           placeholder="Search Recipes"
-          style={inputStyle}
         />
       </form>
+      </div>
     );
   }
 }
-
-const headerStyle = {
-  color: style.color,
-  fontFamily: style.fontFamily,
-  background: style.backgroundContainer,
-  height: 150,
-  margin: 0
-};
-const inputStyle = {
-  width: 300,
-  padding: 10,
-  fontSize: 16,
-  margin: 20,
-  height: 40,
-  display: "block"
-};
 
 export default SearchBar;
