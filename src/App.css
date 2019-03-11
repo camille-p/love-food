@@ -39,6 +39,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: Palatino;
+	background-color: rgb(233,220,205);
 }
 ol, ul {
 	list-style: none;
@@ -72,7 +73,7 @@ img {
 h2 {
 	color: black;
 	font-size: 22px;
-	padding: 5px;
+	padding: 10px;
 }
 p {
 	font-size: 18px;
@@ -97,7 +98,7 @@ footer, header {
 footer p {
 	color: rgb(233,220,205);
 }
-.flexFooter, .flexContainer, .recipeItems {
+.flexFooter, .flexContainer {
 	display: flex;
 }
 .flexFooter {
@@ -119,13 +120,14 @@ justify-content: space-between;
 	background-color: rgb(233,220,205);
 }
 .recipeItems {
-	justify-content: space-around;	
 	background-color: rgb(233,220,205);
-}
+	text-align: center;
+	display: inline-block;
+}	
 .recipeItems a{
 	color: rgb(67,87,94);
 }
-.recipeItemsFlex {
-display: block;
-}
-
+.recipeItems > div {	
+	width: 350px;
+	height: 400px;
+} 
