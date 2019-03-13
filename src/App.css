@@ -148,7 +148,7 @@ h1 {
   font-size: 32px;
   padding: 35px;
 }
-a {
+a, footer, header, footer p {
   color: rgb(233, 220, 205);
 }
 
@@ -156,17 +156,23 @@ img {
   width: 250px;
   display: inline-block;
 }
-
+h2, h3 {
+  color: #1b2e15;
+}
 h2 {
-  color: black;
   font-size: 22px;
+  line-height: 28px;
   padding: 10px;
 }
-p {
+p, .recipeItems a {
   font-size: 18px;
   color: rgb(67, 87, 94);
 }
-
+h3 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px;
+}
 input {
   width: 300px;
   padding: 10px;
@@ -180,12 +186,11 @@ footer,
 header {
   height: 100px;
   margin: 0;
-  color: rgb(233, 220, 205);
-  background-color: rgb(156, 13, 56);
+  background-color: #1b2e15;
 }
 footer p {
-  color: rgb(233, 220, 205);
-  padding: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 footer {
   position: absolute;
@@ -199,6 +204,7 @@ footer {
 }
 .flexFooter {
   justify-content: space-between;
+  align-items: center;
 }
 .flexFooter img {
   width: 150px;
@@ -211,19 +217,19 @@ footer {
   justify-content: center;
   height: 125px;
 }
-.containerStyle {
-  text-align: center;
+.containerStyle, .recipeItems {
   background-color: rgb(233, 220, 205);
+  text-align: center;
 }
+
 .recipeItems {
-  background-color: rgb(233, 220, 205);
-  text-align: center;
   display: inline-block;
 }
-.recipeItems a {
-  color: rgb(67, 87, 94);
-}
+
 .recipeItems > div {
   width: 350px;
   height: 400px;
+}
+.recipeItems img {
+  cursor: pointer;
 }

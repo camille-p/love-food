@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import SearchBar from "./Container.js";
+import SearchBar from "./SearchBar.js";
 import RecipeList from "./RecipeList.js";
 import ReactModal from "react-modal";
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -31,15 +31,14 @@ class App extends Component {
   }
 
   fetchData = query => {
-    const url = `https://api.edamam.com/search?q=${query}&app_id=${appID}&app_key=${appKey}&to=30&health=vegetarian`;
+    const url = `https://api.edamam.com/search?q=${query}&app_id=${appID}&app_key=${appKey}&to=30&ingr=5`;
     fetch(url)
       .then(res => res.json())
       .then(results => {
         this.setState({
           results: results.hits
         });
-        console.log(results)
-      })
+      }) 
       .catch(err => {
         console.log(err);
       });
@@ -53,14 +52,33 @@ class App extends Component {
         <ReactModal 
           isOpen={this.state.showModal}
           contentLabel="Minimal Modal Example"
-          shouldCloseOnEsc={true}
+          ariaHideApp={false}
+          style={{
+            overlay: {
+              backgroundColor: '#1b2e15'
+            },
+            content: {
+              backgroundColor: 'rgb(233, 220, 205)'
+            }
+          }}
         >
           <FontAwesomeIcon icon="window-close" onClick={this.handleCloseModal}/>
-          <div>{this.state.selectedRecipe}</div>
+          <div>
+            <h3 style={style}>Ingredients:</h3>
+            <p style={style}>{this.state.selectedRecipe[0]}</p>
+            <p style={style}>{this.state.selectedRecipe[1]}</p>
+            <p style={style}>{this.state.selectedRecipe[2]}</p>
+            <p style={style}>{this.state.selectedRecipe[3]}</p>
+            <p style={style}>{this.state.selectedRecipe[4]}</p>
+            </div>
         </ReactModal>
       </div>
     );
   }
 }
-
+const style= {
+  padding: 15, 
+  paddingLeft: 0,
+  color: '#1b2e15'
+}
 export default App;
