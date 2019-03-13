@@ -2,16 +2,17 @@ import React from 'react'
 import RecipeItems from './RecipeItems.js'
 
 class RecipeList extends React.Component {
-    render() {        
-        return(
+    render() {
+        return (
             <div>
-                {this.props.results.map((recipe, index) => (<RecipeItems key={index} recipe={recipe.recipe} />))}
+                {this.props.results.map((recipe, index) => (<RecipeItems openModal={this.props.openModal} key={index} recipe={recipe.recipe} />))}
             </div>
         )
     }
 }
-RecipeList.defaultProps= {
-    results: []
+RecipeList.defaultProps = {
+    results: [],
+    openModal: () => {}
 }
 
 export default RecipeList;

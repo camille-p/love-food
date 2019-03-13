@@ -9,21 +9,21 @@ class SearchBar extends React.Component {
     e.preventDefault();
     const text = e.target.text.value;
     this.props.handleSubmit(text);
-};
+  };
   render() {
     return (
       <div>
-    <h2 className="containerStyle">Search for recipes by typing the name of an ingredient</h2>
-      <form
-        onSubmit={this.handleSubmit}
-        className="flexContainer containerStyle"
-      >
-        <input
-          type="text"
-          name="text"
-          placeholder="Search Recipes"
-        />
-      </form>
+        <h2 className="containerStyle">Search for vegetarian recipes by typing the name of an ingredient</h2>
+        <form
+          onSubmit={this.handleSubmit}
+          className="flexContainer containerStyle"
+        >
+          <input
+            type="text"
+            name="text"
+            placeholder="Search Recipes"
+          />
+        </form>
       </div>
     );
   }
