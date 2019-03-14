@@ -58,7 +58,8 @@ class App extends Component {
               backgroundColor: '#1b2e15'
             },
             content: {
-              backgroundColor: 'rgb(233, 220, 205)'
+              backgroundColor: 'rgb(233, 220, 205)',
+              color: '#1b2e15'
             }
           }}
         >

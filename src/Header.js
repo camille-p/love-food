@@ -5,14 +5,12 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faHeart)
 
-class Header extends React.Component {
-    render() {
+const Header = () => {
         return (
             <header>
                 <h1>We <FontAwesomeIcon icon="heart" /> Food!</h1>
             </header>
         )
-    }
 }
 
 
