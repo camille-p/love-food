@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div>
-        <h2 className="containerStyle">Search for quick and easy recipes by typing the name of an ingredient<br/>All recipes require 5 ingredients only!</h2>
+        <h2 className="containerStyle">Search for quick and easy recipes by typing the name of an ingredient<br/>All recipes require maximum 5 ingredients!</h2>
         <form
           onSubmit={this.handleSubmit}
           className="flexContainer containerStyle"
