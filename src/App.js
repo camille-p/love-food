@@ -12,21 +12,23 @@ library.add(faWindowClose)
 const appID = "1a2f22c1";
 const appKey = "c96e4be61d22ecc5470efed6e861855b";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { results: [],
+    this.state = {
+      results: [],
       showModal: false,
       selectedRecipe: ""
     };
     this.handleOpenModal = this.handleOpenModal.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
   }
-  handleOpenModal (recipe) {
-    this.setState({ showModal: true, selectedRecipe: recipe});
+  handleOpenModal(recipe) {
+    this.setState({ showModal: true, selectedRecipe: recipe });
   }
-  
-  handleCloseModal () {
+
+  handleCloseModal() {
     this.setState({ showModal: false });
   }
 
@@ -38,7 +40,7 @@ class App extends Component {
         this.setState({
           results: results.hits
         });
-      }) 
+      })
       .catch(err => {
         console.log(err);
       });
@@ -49,7 +51,7 @@ class App extends Component {
       <div>
         <SearchBar handleSubmit={this.fetchData} />
         <RecipeList openModal={this.handleOpenModal} results={this.state.results} />
-        <ReactModal 
+        <ReactModal
           isOpen={this.state.showModal}
           contentLabel="Minimal Modal Example"
           ariaHideApp={false}
@@ -63,7 +65,7 @@ class App extends Component {
             }
           }}
         >
-          <FontAwesomeIcon icon="window-close" onClick={this.handleCloseModal}/>
+          <FontAwesomeIcon icon="window-close" onClick={this.handleCloseModal} />
           <div>
             <h3 style={style}>Ingredients:</h3>
             <p style={style}>{this.state.selectedRecipe[0]}</p>
@@ -71,14 +73,14 @@ class App extends Component {
             <p style={style}>{this.state.selectedRecipe[2]}</p>
             <p style={style}>{this.state.selectedRecipe[3]}</p>
             <p style={style}>{this.state.selectedRecipe[4]}</p>
-            </div>
+          </div>
         </ReactModal>
       </div>
     );
   }
 }
-const style= {
-  padding: 15, 
+const style = {
+  padding: 15,
   paddingLeft: 0,
   color: '#1b2e15'
 }

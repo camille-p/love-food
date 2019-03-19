@@ -10,8 +10,8 @@ html {
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+  v2.0 | 20110126
+  License: none (public domain)
 */
 
 html,
@@ -148,15 +148,18 @@ h1 {
   font-size: 32px;
   padding: 35px;
 }
-a, footer, header, footer p {
+a,
+footer,
+header,
+footer p {
   color: rgb(233, 220, 205);
 }
-
 img {
   width: 250px;
   display: inline-block;
 }
-h2, h3 {
+h2,
+h3 {
   color: #1b2e15;
 }
 h2 {
@@ -164,7 +167,8 @@ h2 {
   line-height: 28px;
   padding: 10px;
 }
-p, .recipeItems a {
+p,
+.recipeItems a {
   font-size: 18px;
   color: rgb(67, 87, 94);
 }
@@ -181,7 +185,6 @@ input {
   height: 40px;
   display: block;
 }
-
 footer,
 header {
   height: 100px;
@@ -217,15 +220,14 @@ footer {
   justify-content: center;
   height: 125px;
 }
-.containerStyle, .recipeItems {
+.containerStyle,
+.recipeItems {
   background-color: rgb(233, 220, 205);
   text-align: center;
 }
-
 .recipeItems {
   display: inline-block;
 }
-
 .recipeItems > div {
   width: 350px;
   height: 400px;
